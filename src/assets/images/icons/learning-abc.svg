@@ -1,0 +1,44 @@
+<!-- أيقونة الحروف والأرقام التعليمية -->
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="letterGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F9AFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2B6CB0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="numberGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF8FA3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E15065;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- خلفية دائرية للحرف -->
+  <circle cx="20" cy="20" r="15" fill="url(#letterGradient)" stroke="#2B6CB0" stroke-width="2"/>
+  
+  <!-- الحرف A -->
+  <path d="M15 28 L20 12 L25 28 M17 22 L23 22" 
+        stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- خلفية دائرية للرقم -->
+  <circle cx="40" cy="40" r="15" fill="url(#numberGradient)" stroke="#E15065" stroke-width="2"/>
+  
+  <!-- الرقم 1 -->
+  <path d="M38 32 L40 32 L40 48 M36 48 L44 48" 
+        stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- نجوم ديكورية -->
+  <g fill="#FFE066">
+    <path d="M8 8 L9 11 L12 11 L10 13 L11 16 L8 14 L5 16 L6 13 L4 11 L7 11 Z"/>
+    <path d="M48 8 L49 11 L52 11 L50 13 L51 16 L48 14 L45 16 L46 13 L44 11 L47 11 Z"/>
+    <path d="M8 48 L9 51 L12 51 L10 53 L11 56 L8 54 L5 56 L6 53 L4 51 L7 51 Z"/>
+  </g>
+  
+  <!-- تأثيرات الإشراق -->
+  <ellipse cx="17" cy="17" rx="4" ry="3" fill="rgba(255,255,255,0.3)"/>
+  <ellipse cx="43" cy="37" rx="4" ry="3" fill="rgba(255,255,255,0.3)"/>
+  
+  <!-- خطوط ديكورية منحنية -->
+  <path d="M35 20 Q45 15 55 25" 
+        stroke="#A855F7" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M5 35 Q15 30 25 40" 
+        stroke="#22C55E" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

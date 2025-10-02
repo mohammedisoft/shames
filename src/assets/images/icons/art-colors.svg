@@ -1,0 +1,43 @@
+<!-- أيقونة الألوان والرسم -->
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brushGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A0522D;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- فرشاة الرسم -->
+  <rect x="35" y="5" width="4" height="25" rx="2" fill="url(#brushGradient)"/>
+  <ellipse cx="37" cy="30" rx="3" ry="2" fill="#FF8FA3"/>
+  
+  <!-- لوحة الألوان -->
+  <ellipse cx="25" cy="35" rx="18" ry="12" fill="white" stroke="#ddd" stroke-width="2"/>
+  
+  <!-- الألوان على اللوحة -->
+  <circle cx="15" cy="30" r="3" fill="#FF6B8A"/>
+  <circle cx="25" cy="28" r="3" fill="#4F9AFF"/>
+  <circle cx="35" cy="30" r="3" fill="#22C55E"/>
+  <circle cx="18" cy="40" r="3" fill="#FFE066"/>
+  <circle cx="32" cy="40" r="3" fill="#A855F7"/>
+  
+  <!-- قطرات الطلاء المتساقطة -->
+  <circle cx="42" cy="32" r="1.5" fill="#FF8FA3" opacity="0.8"/>
+  <circle cx="45" cy="38" r="1" fill="#4F9AFF" opacity="0.6"/>
+  <circle cx="40" cy="42" r="1.2" fill="#22C55E" opacity="0.7"/>
+  
+  <!-- نجوم ملونة -->
+  <g fill="#FFE066">
+    <path d="M8 12 L9 15 L12 15 L10 17 L11 20 L8 18 L5 20 L6 17 L4 15 L7 15 Z"/>
+  </g>
+  <g fill="#FF8FA3">
+    <path d="M48 45 L49 48 L52 48 L50 50 L51 53 L48 51 L45 53 L46 50 L44 48 L47 48 Z"/>
+  </g>
+  
+  <!-- خطوط فنية -->
+  <path d="M8 25 Q15 20 22 25" stroke="#A855F7" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M45 15 Q50 20 55 15" stroke="#22C55E" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- تأثير إشراق على اللوحة -->
+  <ellipse cx="20" cy="32" rx="6" ry="4" fill="rgba(255,255,255,0.2)"/>
+</svg>

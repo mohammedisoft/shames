@@ -1,0 +1,273 @@
+/**
+ * Kids Fonts Configuration
+ * خطوط طفولية وتصميم تايبوجرافي مناسب للأطفال
+ */
+
+// استيراد الخطوط من Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// تعريف متغيرات الخطوط
+:root {
+  // الخطوط الأساسية
+  --font-kid-display: 'Fredoka One', 'Comic Neue', Arial, sans-serif;    // للعناوين الكبيرة
+  --font-kid-heading: 'Nunito', 'Comic Neue', Arial, sans-serif;         // للعناوين الفرعية
+  --font-kid-body: 'Poppins', 'Nunito', Arial, sans-serif;               // للنصوص العادية
+  --font-kid-fun: 'Comic Neue', 'Fredoka One', Arial, sans-serif;        // للنصوص المرحة
+  
+  // أوزان الخطوط
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+  
+  // أحجام الخطوط - مُحسّنة للقراءة السهلة للأطفال
+  --text-size-xs: clamp(0.75rem, 0.9vw, 0.875rem);      // 12-14px
+  --text-size-sm: clamp(0.875rem, 1vw, 1rem);           // 14-16px
+  --text-size-base: clamp(1rem, 1.1vw, 1.125rem);       // 16-18px
+  --text-size-lg: clamp(1.125rem, 1.3vw, 1.25rem);      // 18-20px
+  --text-size-xl: clamp(1.25rem, 1.5vw, 1.375rem);      // 20-22px
+  --text-size-2xl: clamp(1.5rem, 2vw, 1.75rem);         // 24-28px
+  --text-size-3xl: clamp(1.875rem, 2.5vw, 2.25rem);     // 30-36px
+  --text-size-4xl: clamp(2.25rem, 3vw, 2.75rem);        // 36-44px
+  --text-size-5xl: clamp(3rem, 4vw, 3.5rem);            // 48-56px
+  --text-size-6xl: clamp(3.75rem, 5vw, 4.5rem);         // 60-72px
+  
+  // ارتفاع الأسطر - مريح للقراءة
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.7;
+  --line-height-loose: 2;
+  
+  // تباعد الأحرف
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+}
+
+// كلاسات للخطوط الطفولية
+.font-kid-display {
+  font-family: var(--font-kid-display);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.font-kid-heading {
+  font-family: var(--font-kid-heading);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.font-kid-body {
+  font-family: var(--font-kid-body);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.font-kid-fun {
+  font-family: var(--font-kid-fun);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+// أحجام النصوص الطفولية
+.text-kid-xs { font-size: var(--text-size-xs); }
+.text-kid-sm { font-size: var(--text-size-sm); }
+.text-kid-base { font-size: var(--text-size-base); }
+.text-kid-lg { font-size: var(--text-size-lg); }
+.text-kid-xl { font-size: var(--text-size-xl); }
+.text-kid-2xl { font-size: var(--text-size-2xl); }
+.text-kid-3xl { font-size: var(--text-size-3xl); }
+.text-kid-4xl { font-size: var(--text-size-4xl); }
+.text-kid-5xl { font-size: var(--text-size-5xl); }
+.text-kid-6xl { font-size: var(--text-size-6xl); }
+
+// أوزان الخطوط
+.font-light { font-weight: var(--font-weight-light); }
+.font-normal { font-weight: var(--font-weight-normal); }
+.font-medium { font-weight: var(--font-weight-medium); }
+.font-semibold { font-weight: var(--font-weight-semibold); }
+.font-bold { font-weight: var(--font-weight-bold); }
+.font-extrabold { font-weight: var(--font-weight-extrabold); }
+.font-black { font-weight: var(--font-weight-black); }
+
+// ارتفاع الأسطر
+.leading-tight { line-height: var(--line-height-tight); }
+.leading-normal { line-height: var(--line-height-normal); }
+.leading-relaxed { line-height: var(--line-height-relaxed); }
+.leading-loose { line-height: var(--line-height-loose); }
+
+// تباعد الأحرف
+.tracking-tight { letter-spacing: var(--letter-spacing-tight); }
+.tracking-normal { letter-spacing: var(--letter-spacing-normal); }
+.tracking-wide { letter-spacing: var(--letter-spacing-wide); }
+.tracking-wider { letter-spacing: var(--letter-spacing-wider); }
+.tracking-widest { letter-spacing: var(--letter-spacing-widest); }
+
+// أنماط نصوص مُعرّفة مسبقاً
+.text-hero {
+  font-family: var(--font-kid-display);
+  font-size: var(--text-size-6xl);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-wide);
+  background: linear-gradient(135deg, 
+    var(--color-puzzle-primary) 0%, 
+    var(--color-playful-blue) 50%, 
+    var(--color-playful-purple) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+.text-title {
+  font-family: var(--font-kid-heading);
+  font-size: var(--text-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-normal);
+  color: var(--color-puzzle-primary);
+}
+
+.text-subtitle {
+  font-family: var(--font-kid-heading);
+  font-size: var(--text-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+  color: var(--color-playful-blue);
+}
+
+.text-body-large {
+  font-family: var(--font-kid-body);
+  font-size: var(--text-size-lg);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  color: #374151;
+}
+
+.text-caption {
+  font-family: var(--font-kid-body);
+  font-size: var(--text-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  color: #6B7280;
+}
+
+.text-badge {
+  font-family: var(--font-kid-fun);
+  font-size: var(--text-size-xs);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-wider);
+  text-transform: uppercase;
+}
+
+// تأثيرات نصية طفولية
+.text-shadow-soft {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-shadow-medium {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.text-shadow-strong {
+  text-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.text-rainbow {
+  background: linear-gradient(135deg,
+    var(--color-playful-pink) 0%,
+    var(--color-playful-orange) 20%,
+    var(--color-playful-yellow) 40%,
+    var(--color-puzzle-primary) 60%,
+    var(--color-playful-blue) 80%,
+    var(--color-playful-purple) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300% 300%;
+  animation: rainbow-move 6s ease-in-out infinite;
+}
+
+@keyframes rainbow-move {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+// تأثيرات تفاعلية للنصوص
+.text-interactive {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  
+  &:hover {
+    transform: translateY(-2px) scale(1.05);
+    text-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+  }
+}
+
+.text-bounce-hover {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &:hover {
+    animation: text-bounce 0.6s ease-in-out;
+  }
+}
+
+@keyframes text-bounce {
+  0%, 20%, 53%, 80%, 100% { transform: translateY(0); }
+  40%, 43% { transform: translateY(-10px); }
+  70% { transform: translateY(-5px); }
+  90% { transform: translateY(-2px); }
+}
+
+// دعم RTL (العربية)
+[dir="rtl"] {
+  .font-kid-display,
+  .font-kid-heading,
+  .font-kid-body,
+  .font-kid-fun {
+    font-family: 'Cairo', 'Nunito', 'Poppins', Arial, sans-serif;
+  }
+  
+  .text-hero,
+  .text-title,
+  .text-subtitle {
+    letter-spacing: normal;
+  }
+}
+
+// استجابة للشاشات الصغيرة
+@media (max-width: 768px) {
+  :root {
+    --text-size-4xl: clamp(1.75rem, 4vw, 2.25rem);     // 28-36px
+    --text-size-5xl: clamp(2.25rem, 5vw, 3rem);        // 36-48px
+    --text-size-6xl: clamp(2.75rem, 6vw, 3.75rem);     // 44-60px
+  }
+  
+  .text-hero {
+    font-size: var(--text-size-5xl);
+  }
+  
+  .text-title {
+    font-size: var(--text-size-3xl);
+  }
+}
+
+// تحسينات الطباعة
+@media print {
+  .text-rainbow,
+  .text-hero {
+    -webkit-text-fill-color: initial;
+    background: none;
+    color: #000;
+  }
+}

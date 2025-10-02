@@ -1,0 +1,67 @@
+/* AOS Animation Library Styles */
+/* استيراد مكتبة AOS للأنيميشن */
+
+/* تخصيصات إضافية لأنيميشن AOS مع التيم الطفولي */
+[data-aos] {
+    &.kids-theme {
+        /* تحسين أنيميشن للتيم الطفولي */
+        transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        
+        &[data-aos="fade-up"] {
+            transform: translate3d(0, 50px, 0) scale(0.95);
+        }
+        
+        &[data-aos="zoom-in"] {
+            transform: scale(0.8) rotate(-5deg);
+        }
+        
+        &[data-aos="flip-left"] {
+            transform: perspective(1000px) rotateY(-45deg) scale(0.9);
+        }
+        
+        &.aos-animate {
+            transform: translateZ(0) scale(1) rotate(0deg);
+        }
+    }
+}
+
+/* أنيميشن مخصص للعناصر الطفولية */
+[data-aos="bounce-in"] {
+    opacity: 0;
+    transform: scale(0.3) translate3d(0, -100px, 0);
+    transition-property: transform, opacity;
+    
+    &.aos-animate {
+        opacity: 1;
+        transform: scale(1) translate3d(0, 0, 0);
+        transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+}
+
+[data-aos="wiggle"] {
+    transform: rotate(0deg);
+    transition-property: transform;
+    
+    &.aos-animate {
+        animation: wiggle 0.6s ease-in-out;
+    }
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-3deg) scale(1.02); }
+    50% { transform: rotate(3deg) scale(1.05); }
+    75% { transform: rotate(-2deg) scale(1.02); }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+/* تحسين أنيميشن للموبايل */
+@media (max-width: 768px) {
+    [data-aos] {
+        transition-duration: 0.4s !important;
+        
+        &[data-aos-delay] {
+            transition-delay: 0.1s !important;
+        }
+    }
+}

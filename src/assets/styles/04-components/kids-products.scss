@@ -1,0 +1,521 @@
+/**
+ * Kids Product Cards & Banners
+ * تصميم كروت المنتجات والبنرات الطفولية
+ */
+
+// بنرات الصفحة الرئيسية الطفولية
+.kids-hero-banner {
+  position: relative;
+  background: linear-gradient(135deg, 
+    var(--bg-kid-mint) 0%, 
+    var(--bg-kid-sky) 50%, 
+    var(--bg-kid-lavender) 100%);
+  border-radius: var(--radius-kid-xl);
+  padding: var(--spacing-kid-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-kid-medium);
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, 
+      rgba(34, 197, 94, 0.1) 0%, 
+      transparent 70%);
+    animation: rotate-gradient 20s linear infinite;
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-family: var(--font-kid-display);
+    font-size: var(--text-size-5xl);
+    background: linear-gradient(135deg, 
+      var(--color-puzzle-primary) 0%, 
+      var(--color-playful-blue) 50%, 
+      var(--color-playful-purple) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: var(--spacing-kid-md);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-subtitle {
+    font-family: var(--font-kid-heading);
+    font-size: var(--text-size-xl);
+    color: var(--color-playful-blue);
+    margin-bottom: var(--spacing-kid-lg);
+    line-height: var(--line-height-relaxed);
+  }
+  
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-kid-sm);
+    padding: var(--spacing-kid-md) var(--spacing-kid-xl);
+    background: linear-gradient(135deg,
+      var(--color-playful-pink) 0%,
+      var(--color-playful-orange) 25%,
+      var(--color-playful-yellow) 50%,
+      var(--color-puzzle-primary) 75%,
+      var(--color-playful-blue) 100%);
+    color: white;
+    border-radius: var(--radius-kid-full);
+    font-family: var(--font-kid-heading);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    box-shadow: var(--shadow-rainbow);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 8px 35px rgba(255, 107, 138, 0.4), 
+                  0 12px 45px rgba(79, 154, 255, 0.3),
+                  0 16px 55px rgba(255, 184, 77, 0.2);
+      filter: brightness(1.1);
+    }
+    
+    &:active {
+      transform: translateY(-2px) scale(1.02);
+    }
+  }
+}
+
+// كروت المنتجات الطفولية
+.product-card-kids {
+  position: relative;
+  background: white;
+  border-radius: var(--radius-kid-lg);
+  box-shadow: var(--shadow-kid-soft);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+  
+  &:hover {
+    transform: translateY(-8px) rotate(2deg) scale(1.02);
+    box-shadow: var(--shadow-kid-strong);
+    border-color: var(--color-puzzle-light);
+    
+    .product-image {
+      transform: scale(1.1);
+      filter: brightness(1.1) saturate(1.2);
+    }
+    
+    .product-badge {
+      animation: kid-bounce 0.6s ease-in-out;
+    }
+    
+    .product-action-btns {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .product-image-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    border-radius: var(--radius-kid-lg) var(--radius-kid-lg) 0 0;
+    background: var(--bg-kid-cream);
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, 
+        rgba(34, 197, 94, 0.05) 0%, 
+        rgba(79, 154, 255, 0.05) 100%);
+      z-index: 1;
+    }
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 2;
+  }
+  
+  .product-badge {
+    position: absolute;
+    top: var(--spacing-kid-md);
+    right: var(--spacing-kid-md);
+    background: var(--color-playful-red);
+    color: white;
+    padding: var(--spacing-kid-xs) var(--spacing-kid-sm);
+    border-radius: var(--radius-kid-full);
+    font-family: var(--font-kid-fun);
+    font-size: var(--text-size-xs);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    
+    &.new {
+      background: var(--color-playful-blue);
+    }
+    
+    &.sale {
+      background: var(--color-playful-orange);
+    }
+    
+    &.featured {
+      background: var(--color-playful-purple);
+    }
+  }
+  
+  .product-action-btns {
+    position: absolute;
+    top: var(--spacing-kid-md);
+    left: var(--spacing-kid-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-kid-xs);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 3;
+    
+    .action-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: white;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      
+      &:hover {
+        transform: scale(1.1);
+        background: var(--color-puzzle-primary);
+        color: white;
+      }
+      
+      &.wishlist-btn {
+        &:hover {
+          background: var(--color-playful-red);
+        }
+        
+        &.active {
+          background: var(--color-playful-red);
+          color: white;
+        }
+      }
+      
+      &.quick-view-btn:hover {
+        background: var(--color-playful-blue);
+      }
+    }
+  }
+  
+  .product-content {
+    padding: var(--spacing-kid-lg);
+    
+    .product-category {
+      font-family: var(--font-kid-fun);
+      font-size: var(--text-size-xs);
+      color: var(--color-playful-blue);
+      text-transform: uppercase;
+      letter-spacing: var(--letter-spacing-wider);
+      margin-bottom: var(--spacing-kid-xs);
+    }
+    
+    .product-title {
+      font-family: var(--font-kid-heading);
+      font-size: var(--text-size-lg);
+      font-weight: var(--font-weight-bold);
+      color: #1F2937;
+      margin-bottom: var(--spacing-kid-sm);
+      line-height: var(--line-height-normal);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    
+    .product-rating {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-kid-xs);
+      margin-bottom: var(--spacing-kid-sm);
+      
+      .stars {
+        display: flex;
+        gap: 2px;
+        
+        .star {
+          width: 14px;
+          height: 14px;
+          background: var(--color-playful-yellow);
+          clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+          
+          &.empty {
+            background: #E5E7EB;
+          }
+        }
+      }
+      
+      .rating-text {
+        font-size: var(--text-size-xs);
+        color: #6B7280;
+        font-family: var(--font-kid-body);
+      }
+    }
+    
+    .product-price {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-kid-sm);
+      margin-bottom: var(--spacing-kid-md);
+      
+      .current-price {
+        font-family: var(--font-kid-heading);
+        font-size: var(--text-size-xl);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-puzzle-primary);
+      }
+      
+      .original-price {
+        font-size: var(--text-size-sm);
+        color: #9CA3AF;
+        text-decoration: line-through;
+        font-family: var(--font-kid-body);
+      }
+      
+      .discount-percentage {
+        background: var(--color-playful-red);
+        color: white;
+        padding: 2px 6px;
+        border-radius: var(--radius-kid-sm);
+        font-size: var(--text-size-xs);
+        font-weight: var(--font-weight-bold);
+        font-family: var(--font-kid-fun);
+      }
+    }
+    
+    .add-to-cart-btn {
+      width: 100%;
+      padding: var(--spacing-kid-sm) var(--spacing-kid-md);
+      background: var(--color-puzzle-primary);
+      color: white;
+      border: none;
+      border-radius: var(--radius-kid-md);
+      font-family: var(--font-kid-heading);
+      font-weight: var(--font-weight-bold);
+      font-size: var(--text-size-sm);
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: var(--shadow-kid-soft);
+      
+      &:hover {
+        background: var(--color-puzzle-light);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-kid-medium);
+      }
+      
+      &:active {
+        transform: translateY(0);
+      }
+      
+      &:disabled {
+        background: #9CA3AF;
+        cursor: not-allowed;
+        transform: none;
+      }
+    }
+  }
+}
+
+// بنرات الفئات الطفولية
+.category-banner-kids {
+  position: relative;
+  border-radius: var(--radius-kid-lg);
+  overflow: hidden;
+  height: 250px;
+  background: var(--bg-kid-cream);
+  box-shadow: var(--shadow-kid-soft);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: var(--shadow-kid-medium);
+    
+    .banner-image {
+      transform: scale(1.1);
+      filter: brightness(1.1);
+    }
+    
+    .banner-overlay {
+      background: rgba(0, 0, 0, 0.3);
+    }
+  }
+  
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  .banner-content {
+    text-align: center;
+    color: white;
+    
+    .category-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto var(--spacing-kid-md);
+      opacity: 0.9;
+    }
+    
+    .category-title {
+      font-family: var(--font-kid-display);
+      font-size: var(--text-size-2xl);
+      margin-bottom: var(--spacing-kid-sm);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+    
+    .category-description {
+      font-family: var(--font-kid-body);
+      font-size: var(--text-size-sm);
+      opacity: 0.9;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+// شبكة المنتجات الطفولية
+.products-grid-kids {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-kid-xl);
+  padding: var(--spacing-kid-xl) 0;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing-kid-lg);
+    padding: var(--spacing-kid-lg) 0;
+  }
+}
+
+// أنيميشن دوران التدرج
+@keyframes rotate-gradient {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// أنيميشن الارتداد للشارات
+@keyframes kid-bounce {
+  0%, 20%, 53%, 80%, 100% { transform: translateY(0) scale(1); }
+  40%, 43% { transform: translateY(-8px) scale(1.1); }
+  70% { transform: translateY(-4px) scale(1.05); }
+  90% { transform: translateY(-2px) scale(1.02); }
+}
+
+// تحسينات للشاشات الصغيرة
+@media (max-width: 768px) {
+  .kids-hero-banner {
+    padding: var(--spacing-kid-lg);
+    height: auto;
+    
+    .hero-title {
+      font-size: var(--text-size-3xl);
+    }
+    
+    .hero-subtitle {
+      font-size: var(--text-size-lg);
+    }
+  }
+  
+  .product-card-kids {
+    .product-image-container {
+      height: 180px;
+    }
+    
+    .product-content {
+      padding: var(--spacing-kid-md);
+    }
+  }
+  
+  .category-banner-kids {
+    height: 200px;
+    
+    .banner-content {
+      .category-icon {
+        width: 50px;
+        height: 50px;
+      }
+      
+      .category-title {
+        font-size: var(--text-size-xl);
+      }
+    }
+  }
+}
+
+// تحسينات إضافية للانطباع البصري
+.loading-skeleton-kids {
+  background: linear-gradient(90deg, 
+    var(--bg-kid-cream) 25%, 
+    rgba(255, 255, 255, 0.8) 50%, 
+    var(--bg-kid-cream) 75%);
+  background-size: 200% 100%;
+  animation: loading-shimmer 2s infinite;
+}
+
+@keyframes loading-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+// تأثيرات خاصة للمناسبات
+.special-occasion-banner {
+  position: relative;
+  
+  &::after {
+    content: '🎉';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    animation: celebration-bounce 2s ease-in-out infinite;
+  }
+}
+
+@keyframes celebration-bounce {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.2) rotate(10deg); }
+}

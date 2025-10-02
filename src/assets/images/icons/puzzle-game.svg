@@ -1,0 +1,49 @@
+<!-- أيقونة البازل والألغاز -->
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="puzzleGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF8FA3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E15065;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="puzzleGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A855F7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="puzzleGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22C55E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16A34A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="puzzleGradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFE066;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F1C40F;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- قطعة البازل العلوية اليسرى -->
+  <path d="M5 5 L25 5 C25 10 20 15 25 15 C30 15 25 20 25 25 L5 25 Z" 
+        fill="url(#puzzleGradient1)" stroke="#E15065" stroke-width="2"/>
+  
+  <!-- قطعة البازل العلوية اليمنى -->
+  <path d="M35 5 L55 5 L55 25 C50 25 45 20 45 25 C45 30 40 25 35 25 C35 20 40 15 35 15 C30 15 35 10 35 5 Z" 
+        fill="url(#puzzleGradient2)" stroke="#7C3AED" stroke-width="2"/>
+  
+  <!-- قطعة البازل السفلى اليسرى -->
+  <path d="M5 35 C10 35 15 40 15 35 C15 30 20 35 25 35 L25 55 L5 55 Z" 
+        fill="url(#puzzleGradient3)" stroke="#16A34A" stroke-width="2"/>
+  
+  <!-- قطعة البازل السفلى اليمنى -->
+  <path d="M35 35 L55 35 L55 55 L35 55 C35 50 30 45 35 45 C40 45 35 40 35 35 Z" 
+        fill="url(#puzzleGradient4)" stroke="#F1C40F" stroke-width="2"/>
+  
+  <!-- تأثيرات الإشراق -->
+  <ellipse cx="15" cy="12" rx="3" ry="2" fill="rgba(255,255,255,0.4)"/>
+  <ellipse cx="45" cy="12" rx="3" ry="2" fill="rgba(255,255,255,0.4)"/>
+  <ellipse cx="15" cy="48" rx="3" ry="2" fill="rgba(255,255,255,0.4)"/>
+  <ellipse cx="45" cy="48" rx="3" ry="2" fill="rgba(255,255,255,0.4)"/>
+  
+  <!-- نقاط الاتصال -->
+  <circle cx="30" cy="15" r="1.5" fill="#ffffff" opacity="0.8"/>
+  <circle cx="15" cy="30" r="1.5" fill="#ffffff" opacity="0.8"/>
+  <circle cx="45" cy="30" r="1.5" fill="#ffffff" opacity="0.8"/>
+  <circle cx="30" cy="45" r="1.5" fill="#ffffff" opacity="0.8"/>
+</svg>

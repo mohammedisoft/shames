@@ -14,6 +14,12 @@ module.exports = {
         'product-card' : asset('js/partials/product-card.js'),
         'main-menu' : asset('js/partials/main-menu.js'),
         'wishlist-card': asset('js/partials/wishlist-card.js'),
+        'kids-theme': [
+            asset('js/partials/kids-theme-controller.js'),
+            asset('js/partials/kids-icons.js'),
+            asset('js/partials/kids-hero-3d.js'),
+            asset('js/partials/kids-micro-interactions.js')
+        ],
         checkout: [asset('js/cart.js'), asset('js/thankyou.js')],
         pages   : [asset('js/loyalty.js'), asset('js/brands.js'),],
         product : [asset('js/product.js'), asset('js/products.js')],

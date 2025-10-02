@@ -1,0 +1,263 @@
+/**
+ * Kids Theme Styles
+ * تصميم طفولي مخصص لمتجر الألعاب التعليمية
+ */
+
+// متغيرات CSS للألوان الطفولية
+:root {
+  // ألوان بزل الأساسية
+  --color-puzzle-primary: #22C55E;
+  --color-puzzle-light: #4ADE80;
+  --color-puzzle-dark: #16A34A;
+  
+  // ألوان طفولية
+  --color-playful-blue: #4F9AFF;
+  --color-playful-orange: #FFB84D;
+  --color-playful-pink: #FF8FA3;
+  --color-playful-yellow: #FFE066;
+  --color-playful-purple: #A855F7;
+  --color-playful-red: #FF6B8A;
+  
+  // خلفيات طفولية
+  --bg-kid-cream: #FFF8E7;
+  --bg-kid-mint: #F0FDF9;
+  --bg-kid-lavender: #F8F7FF;
+  --bg-kid-peach: #FFF5F0;
+  --bg-kid-sky: #F0F9FF;
+  
+  // ظلال طفولية
+  --shadow-kid-soft: 0 4px 20px rgba(34, 197, 94, 0.15);
+  --shadow-kid-medium: 0 8px 30px rgba(34, 197, 94, 0.2);
+  --shadow-kid-strong: 0 12px 40px rgba(34, 197, 94, 0.25);
+  --shadow-rainbow: 0 4px 15px rgba(255, 107, 138, 0.3), 
+                    0 8px 25px rgba(79, 154, 255, 0.2),
+                    0 12px 35px rgba(255, 184, 77, 0.15);
+  
+  // متغيرات للخطوط
+  --font-kid-primary: 'Comic Neue', 'Nunito', 'Arial', sans-serif;
+  --font-kid-display: 'Fredoka One', 'Comic Neue', 'Arial', sans-serif;
+  
+  // أحجام الخطوط الطفولية
+  --text-kid-xs: 0.75rem;     // 12px
+  --text-kid-sm: 0.875rem;    // 14px
+  --text-kid-base: 1rem;      // 16px
+  --text-kid-lg: 1.125rem;    // 18px
+  --text-kid-xl: 1.25rem;     // 20px
+  --text-kid-2xl: 1.5rem;     // 24px
+  --text-kid-3xl: 1.875rem;   // 30px
+  --text-kid-4xl: 2.25rem;    // 36px
+  --text-kid-5xl: 3rem;       // 48px
+  
+  // متغيرات للمسافات
+  --spacing-kid-xs: 0.25rem;  // 4px
+  --spacing-kid-sm: 0.5rem;   // 8px
+  --spacing-kid-md: 1rem;     // 16px
+  --spacing-kid-lg: 1.5rem;   // 24px
+  --spacing-kid-xl: 2rem;     // 32px
+  --spacing-kid-2xl: 3rem;    // 48px
+  
+  // متغيرات للانحناءات
+  --radius-kid-sm: 8px;
+  --radius-kid-md: 12px;
+  --radius-kid-lg: 16px;
+  --radius-kid-xl: 20px;
+  --radius-kid-full: 9999px;
+}
+
+// كلاسات مساعدة للألوان الطفولية
+.text-puzzle-green { color: var(--color-puzzle-primary); }
+.text-playful-blue { color: var(--color-playful-blue); }
+.text-playful-orange { color: var(--color-playful-orange); }
+.text-playful-pink { color: var(--color-playful-pink); }
+.text-playful-yellow { color: var(--color-playful-yellow); }
+.text-playful-purple { color: var(--color-playful-purple); }
+.text-playful-red { color: var(--color-playful-red); }
+
+// خلفيات طفولية
+.bg-kid-cream { background-color: var(--bg-kid-cream); }
+.bg-kid-mint { background-color: var(--bg-kid-mint); }
+.bg-kid-lavender { background-color: var(--bg-kid-lavender); }
+.bg-kid-peach { background-color: var(--bg-kid-peach); }
+.bg-kid-sky { background-color: var(--bg-kid-sky); }
+
+// ظلال طفولية
+.shadow-kid-soft { box-shadow: var(--shadow-kid-soft); }
+.shadow-kid-medium { box-shadow: var(--shadow-kid-medium); }
+.shadow-kid-strong { box-shadow: var(--shadow-kid-strong); }
+.shadow-rainbow { box-shadow: var(--shadow-rainbow); }
+
+// تدرجات ملونة طفولية
+.bg-gradient-kid-primary {
+  background: linear-gradient(135deg, 
+    var(--color-puzzle-primary) 0%, 
+    var(--color-puzzle-light) 100%);
+}
+
+.bg-gradient-kid-rainbow {
+  background: linear-gradient(135deg,
+    var(--color-playful-pink) 0%,
+    var(--color-playful-orange) 25%,
+    var(--color-playful-yellow) 50%,
+    var(--color-puzzle-primary) 75%,
+    var(--color-playful-blue) 100%);
+}
+
+.bg-gradient-kid-soft {
+  background: linear-gradient(135deg,
+    var(--bg-kid-mint) 0%,
+    var(--bg-kid-sky) 50%,
+    var(--bg-kid-lavender) 100%);
+}
+
+// خطوط طفولية
+.font-kid-primary { font-family: var(--font-kid-primary); }
+.font-kid-display { font-family: var(--font-kid-display); }
+
+// أحجام خطوط طفولية
+.text-kid-xs { font-size: var(--text-kid-xs); }
+.text-kid-sm { font-size: var(--text-kid-sm); }
+.text-kid-base { font-size: var(--text-kid-base); }
+.text-kid-lg { font-size: var(--text-kid-lg); }
+.text-kid-xl { font-size: var(--text-kid-xl); }
+.text-kid-2xl { font-size: var(--text-kid-2xl); }
+.text-kid-3xl { font-size: var(--text-kid-3xl); }
+.text-kid-4xl { font-size: var(--text-kid-4xl); }
+.text-kid-5xl { font-size: var(--text-kid-5xl); }
+
+// تأثيرات تفاعلية طفولية
+.kid-hover-bounce {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &:hover {
+    transform: translateY(-4px) scale(1.05);
+    animation: bounce 0.6s ease-in-out;
+  }
+}
+
+.kid-hover-wiggle {
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    animation: wiggle 0.8s ease-in-out;
+  }
+}
+
+.kid-hover-glow {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    filter: brightness(1.1) saturate(1.2);
+    box-shadow: var(--shadow-rainbow);
+  }
+}
+
+// أزرار طفولية
+.btn-kid-primary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  color: white;
+  background: var(--color-puzzle-primary);
+  box-shadow: var(--shadow-kid-soft);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  cursor: pointer;
+  
+  &:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: var(--shadow-kid-medium);
+    background: var(--color-puzzle-light);
+  }
+  
+  &:active {
+    transform: translateY(0) scale(0.98);
+  }
+}
+
+.btn-kid-rainbow {
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg,
+    var(--color-playful-pink) 0%,
+    var(--color-playful-orange) 25%,
+    var(--color-playful-yellow) 50%,
+    var(--color-puzzle-primary) 75%,
+    var(--color-playful-blue) 100%);
+  box-shadow: var(--shadow-rainbow);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  cursor: pointer;
+  
+  &:hover {
+    transform: translateY(-3px) scale(1.05);
+    filter: brightness(1.1);
+  }
+  
+  &:active {
+    transform: translateY(-1px) scale(1.02);
+  }
+}
+
+// كروت طفولية
+.card-kid {
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  background: white;
+  box-shadow: var(--shadow-kid-soft);
+  border: 2px solid transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &:hover {
+    transform: translateY(-4px) rotate(1deg);
+    box-shadow: var(--shadow-kid-medium);
+    border-color: var(--color-puzzle-light);
+  }
+}
+
+// تأثيرات الحمل (Loading) الطفولية
+.loading-kid {
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      transparent, 
+      var(--color-puzzle-light), 
+      transparent);
+    animation: shimmer 2s infinite;
+  }
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+// تحديد الموضوع المظلم للأطفال
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-kid-cream: #2A2A2A;
+    --bg-kid-mint: #1A2A1A;
+    --bg-kid-lavender: #2A2A3A;
+    --bg-kid-peach: #2A2A1A;
+    --bg-kid-sky: #1A2A3A;
+  }
+}
+
+// استجابة للشاشات الصغيرة
+@media (max-width: 768px) {
+  :root {
+    --text-kid-2xl: 1.25rem;   // 20px
+    --text-kid-3xl: 1.5rem;    // 24px
+    --text-kid-4xl: 1.875rem;  // 30px
+    --text-kid-5xl: 2.25rem;   // 36px
+  }
+}

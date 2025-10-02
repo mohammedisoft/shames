@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الألعاب التعليمية - عالم مليء بالمرح والتعلم</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/app.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="متجر متخصص في الألعاب التعليمية المحسوسة للأطفال - تطوير المهارات والإبداع">
+    <meta name="keywords" content="ألعاب تعليمية, ألعاب أطفال, تطوير المهارات, بازل, مكعبات بناء">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="متجر الألعاب التعليمية - عالم مليء بالمرح والتعلم">
+    <meta property="og:description" content="اكتشف مجموعة رائعة من الألعاب التعليمية المحسوسة التي تنمي إبداع طفلك">
+    <meta property="og:type" content="website">
+    
+    <!-- Kids Theme Specific Styles -->
+    <style>
+        body {
+            font-family: var(--font-kid-body);
+            background: var(--bg-kid-mint);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        .kids-cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, #22C55E, #4ADE80);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="kids-theme">
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading kids-loader">
+        <div class="loader-content">
+            <div class="loader-toy">🎮</div>
+            <div class="loader-text font-kid-display text-kid-xl">جاري تحضير المتجر...</div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="logo">
+                    <h1 class="text-hero font-kid-display">🧸 عالم الألعاب</h1>
+                    <p class="text-caption opacity-80">متجر الألعاب التعليمية</p>
+                </div>
+                
+                <!-- Navigation Menu -->
+                <div class="nav-menu hidden md:flex items-center gap-6">
+                    <a href="#" class="nav-link font-kid-heading text-kid-lg kid-hover-bounce">الرئيسية</a>
+                    <a href="#" class="nav-link font-kid-heading text-kid-lg kid-hover-bounce">الألعاب</a>
+                    <a href="#" class="nav-link font-kid-heading text-kid-lg kid-hover-bounce">الفئات</a>
+                    <a href="#" class="nav-link font-kid-heading text-kid-lg kid-hover-bounce">عنا</a>
+                    <a href="#" class="nav-link font-kid-heading text-kid-lg kid-hover-bounce">اتصل بنا</a>
+                </div>
+                
+                <!-- Cart & User Actions -->
+                <div class="header-actions flex items-center gap-4">
+                    <button class="action-btn kid-hover-glow" aria-label="البحث">🔍</button>
+                    <button class="action-btn kid-hover-glow" aria-label="المفضلة">❤️</button>
+                    <button class="action-btn kid-hover-glow" aria-label="السلة">
+                        🛒
+                        <span class="cart-count">3</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with 3D Animation -->
+    <section class="hero-section relative">
+        <div class="kids-hero-banner" data-aos="fade-up">
+            <div class="hero-content">
+                <h1 class="hero-title text-rainbow">
+                    اكتشف عالم الألعاب التعليمية
+                </h1>
+                <p class="hero-subtitle font-kid-body">
+                    ألعاب محسوسة تنمي الإبداع وتطور المهارات بطريقة ممتعة وتفاعلية
+                </p>
+                <a href="#products" class="hero-cta">
+                    ابدأ الاستكشاف
+                    <span>🚀</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- 3D Animation Container -->
+        <div id="kids-hero-3d" class="hero-3d-container"></div>
+    </section>
+
+    <!-- Category Icons Grid -->
+    <section class="categories-section py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-title text-center mb-12 font-kid-display" data-aos="fade-up">
+                فئات الألعاب التعليمية
+            </h2>
+            
+            <!-- Icons Grid -->
+            <div class="kids-icons-grid" data-aos="fade-up" data-aos-delay="200"></div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="products-section py-16" id="products">
+        <div class="container mx-auto px-4">
+            <h2 class="text-title text-center mb-12 font-kid-display" data-aos="fade-up">
+                الألعاب المميزة
+            </h2>
+            
+            <div class="products-grid-kids">
+                <!-- Product Card 1 -->
+                <div class="product-card-kids card-kid animate-on-scroll" data-aos="zoom-in">
+                    <div class="product-image-container">
+                        <img src="/images/placeholder.png" alt="مكعبات البناء الملونة" class="product-image">
+                        <div class="product-badge new">جديد</div>
+                        <div class="product-action-btns">
+                            <button class="action-btn wishlist-btn" aria-label="إضافة للمفضلة">❤️</button>
+                            <button class="action-btn quick-view-btn" aria-label="معاينة سريعة">👁️</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">ألعاب البناء</div>
+                        <h3 class="product-title">مكعبات البناء الملونة الكبيرة</h3>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                            </div>
+                            <span class="rating-text">(24 تقييم)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">129 ر.س</span>
+                            <span class="original-price">159 ر.س</span>
+                            <span class="discount-percentage">-19%</span>
+                        </div>
+                        <button class="add-to-cart-btn btn-kid-primary">
+                            إضافة للسلة 🛒
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product Card 2 -->
+                <div class="product-card-kids card-kid animate-on-scroll" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="product-image-container">
+                        <img src="/images/placeholder.png" alt="بازل الحيوانات التعليمي" class="product-image">
+                        <div class="product-badge featured">مميز</div>
+                        <div class="product-action-btns">
+                            <button class="action-btn wishlist-btn" aria-label="إضافة للمفضلة">❤️</button>
+                            <button class="action-btn quick-view-btn" aria-label="معاينة سريعة">👁️</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">الألغاز والبازل</div>
+                        <h3 class="product-title">بازل الحيوانات التعليمي الخشبي</h3>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star empty"></div>
+                            </div>
+                            <span class="rating-text">(18 تقييم)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">89 ر.س</span>
+                        </div>
+                        <button class="add-to-cart-btn btn-kid-primary">
+                            إضافة للسلة 🛒
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product Card 3 -->
+                <div class="product-card-kids card-kid animate-on-scroll" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="product-image-container">
+                        <img src="/images/placeholder.png" alt="مجموعة الألوان والرسم" class="product-image">
+                        <div class="product-badge sale">تخفيض</div>
+                        <div class="product-action-btns">
+                            <button class="action-btn wishlist-btn active" aria-label="إضافة للمفضلة">❤️</button>
+                            <button class="action-btn quick-view-btn" aria-label="معاينة سريعة">👁️</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">الفنون والإبداع</div>
+                        <h3 class="product-title">مجموعة الألوان والرسم المتكاملة</h3>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                            </div>
+                            <span class="rating-text">(31 تقييم)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">199 ر.س</span>
+                            <span class="original-price">249 ر.س</span>
+                            <span class="discount-percentage">-20%</span>
+                        </div>
+                        <button class="add-to-cart-btn btn-kid-primary">
+                            إضافة للسلة 🛒
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Banners -->
+    <section class="category-banners py-16 bg-kid-cream">
+        <div class="container mx-auto px-4">
+            <h2 class="text-title text-center mb-12 font-kid-display" data-aos="fade-up">
+                اكتشف الفئات
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="category-banner-kids special-occasion-banner" data-aos="flip-left">
+                    <img src="/images/placeholder.png" alt="ألعاب البناء والتركيب" class="banner-image">
+                    <div class="banner-overlay">
+                        <div class="banner-content">
+                            <div class="category-icon">🧱</div>
+                            <h3 class="category-title">ألعاب البناء</h3>
+                            <p class="category-description">اكتشف الإبداع مع مكعبات البناء</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-banner-kids" data-aos="flip-left" data-aos-delay="100">
+                    <img src="/images/placeholder.png" alt="الألغاز والبازل" class="banner-image">
+                    <div class="banner-overlay">
+                        <div class="banner-content">
+                            <div class="category-icon">🧩</div>
+                            <h3 class="category-title">الألغاز والبازل</h3>
+                            <p class="category-description">طور مهارات حل المشكلات</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-banner-kids" data-aos="flip-left" data-aos-delay="200">
+                    <img src="/images/placeholder.png" alt="الفنون والإبداع" class="banner-image">
+                    <div class="banner-overlay">
+                        <div class="banner-content">
+                            <div class="category-icon">🎨</div>
+                            <h3 class="category-title">الفنون والإبداع</h3>
+                            <p class="category-description">اطلق العنان للخيال والإبداع</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section py-16 bg-gradient-kid-soft">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-title mb-6 font-kid-display" data-aos="fade-up">
+                انضم لعائلة الألعاب التعليمية 📬
+            </h2>
+            <p class="text-body-large mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                احصل على أحدث العروض والألعاب الجديدة والنصائح التعليمية المفيدة
+            </p>
+            
+            <form class="newsletter-form max-w-md mx-auto" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex gap-4">
+                    <input 
+                        type="email" 
+                        placeholder="أدخل بريدك الإلكتروني" 
+                        class="flex-1 px-6 py-3 rounded-full border-2 border-puzzle-green-300 focus:border-puzzle-green-500 outline-none font-kid-body"
+                        required
+                    >
+                    <button type="submit" class="btn-kid-rainbow px-8 py-3">
+                        اشترك 🚀
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer bg-kid-lavender py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <h3 class="text-subtitle mb-4 font-kid-display">🧸 عالم الألعاب</h3>
+                    <p class="text-body-large mb-4">
+                        متجر متخصص في الألعاب التعليمية المحسوسة التي تنمي إبداع الأطفال وتطور مهاراتهم
+                    </p>
+                    <div class="social-links flex gap-4">
+                        <a href="#" class="social-link kid-hover-bounce">📘</a>
+                        <a href="#" class="social-link kid-hover-bounce">📷</a>
+                        <a href="#" class="social-link kid-hover-bounce">🐦</a>
+                        <a href="#" class="social-link kid-hover-bounce">📺</a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4 class="text-subtitle mb-4 font-kid-heading">روابط سريعة</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link kid-hover-wiggle">عن المتجر</a></li>
+                        <li><a href="#" class="footer-link kid-hover-wiggle">الألعاب</a></li>
+                        <li><a href="#" class="footer-link kid-hover-wiggle">العروض</a></li>
+                        <li><a href="#" class="footer-link kid-hover-wiggle">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Customer Service -->
+                <div class="footer-section">
+                    <h4 class="text-subtitle mb-4 font-kid-heading">خدمة العملاء</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link kid-hover-wiggle">المساعدة والدعم</a></li>
+                        <li><a href="#" class="footer-link kid-hover-wiggle">سياسة الإرجاع</a></li>
+                        <li><a href="#" class="footer-link kid-hover-wiggle">الشحن والتوصيل</a></li>
+                        <li><a href="#" class="footer-link kid-hover-wiggle">الأسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h4 class="text-subtitle mb-4 font-kid-heading">تواصل معنا</h4>
+                    <div class="contact-info space-y-3">
+                        <div class="contact-item">
+                            <span class="icon">📞</span>
+                            <span>+966 50 123 4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">📧</span>
+                            <span>info@toys-world.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">📍</span>
+                            <span>الرياض، المملكة العربية السعودية</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="footer-bottom mt-12 pt-8 border-t border-puzzle-green-200 text-center">
+                <p class="text-caption">
+                    © 2024 عالم الألعاب التعليمية. جميع الحقوق محفوظة 🎮
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="/app.js"></script>
+    <script src="/kids-theme.js"></script>
+    <script>
+        // Initialize the theme when everything is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hide loading screen
+            setTimeout(() => {
+                const loadingScreen = document.getElementById('loading-screen');
+                if (loadingScreen) {
+                    loadingScreen.style.opacity = '0';
+                    setTimeout(() => {
+                        loadingScreen.style.display = 'none';
+                    }, 500);
+                }
+            }, 2000);
+            
+            // Add some interaction feedback
+            document.addEventListener('click', function(e) {
+                if (e.target.matches('.add-to-cart-btn')) {
+                    // Trigger success animation
+                    document.dispatchEvent(new CustomEvent('product-added-to-cart', {
+                        detail: { element: e.target }
+                    }));
+                }
+            });
+        });
+    </script>
+</body>
+</html>

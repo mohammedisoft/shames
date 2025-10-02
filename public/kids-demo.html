@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تجربة ثيم الأطفال - متجر الألعاب التعليمية</title>
+    <link href="./app.css" rel="stylesheet">
+    <style>
+        /* إضافة أنيميشن AOS يدوياً للتجربة */
+        [data-aos] {
+            opacity: 0;
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        [data-aos].aos-animate {
+            opacity: 1;
+            transform: none !important;
+        }
+        
+        [data-aos="fade-up"] {
+            transform: translate3d(0, 50px, 0);
+        }
+        
+        [data-aos="zoom-in"] {
+            transform: scale(0.8);
+        }
+        
+        [data-aos="flip-left"] {
+            transform: perspective(1000px) rotateY(-45deg);
+        }
+        
+        /* خلفية طفولية متدرجة */
+        .hero-bg {
+            background: linear-gradient(135deg, 
+                #F0FDF9 0%,      /* mint فاتح */
+                #FFF8E7 25%,     /* cream */
+                #F8F7FF 50%,     /* lavender */
+                #FFF5F0 75%,     /* peach */
+                #F0F9FF 100%     /* sky */
+            );
+            min-height: 100vh;
+        }
+        
+        /* مظهر الأيقونات ثلاثي الأبعاد */
+        .icon-3d {
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+            transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .icon-3d:hover {
+            transform: translateY(-5px) scale(1.1) rotate(5deg);
+        }
+        
+        /* تأثير النص الطفولي */
+        .text-rainbow {
+            background: linear-gradient(
+                45deg,
+                #FF6B8A,
+                #FFB84D,
+                #22C55E,
+                #4F9AFF,
+                #A855F7
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0%, 100% { filter: hue-rotate(0deg); }
+            50% { filter: hue-rotate(180deg); }
+        }
+        
+        /* بطاقات طفولية */
+        .card-playful {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: rotate(-1deg);
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .card-playful:nth-child(even) {
+            transform: rotate(1deg);
+        }
+        
+        .card-playful:hover {
+            transform: rotate(0deg) scale(1.05) translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        /* أزرار طفولية */
+        .btn-playful {
+            background: linear-gradient(135deg, #22C55E, #16A34A);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 15px;
+            font-family: 'Fredoka One', cursive;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-playful:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-playful:hover {
+            transform: scale(1.1) rotate(-2deg);
+            box-shadow: 0 10px 20px rgba(34, 197, 94, 0.3);
+        }
+        
+        .btn-playful:hover:before {
+            left: 100%;
+        }
+    </style>
+</head>
+<body class="hero-bg">
+    <!-- Hero Section -->
+    <div class="container mx-auto px-4 py-12">
+        <!-- Header -->
+        <header class="text-center mb-12" data-aos="fade-up">
+            <h1 class="text-6xl font-bold text-rainbow mb-4 font-['Fredoka_One']">
+                🎨 متجر الألعاب التعليمية 🧩
+            </h1>
+            <p class="text-2xl text-gray-700 font-['Nunito'] mb-8">
+                عالم من المرح والتعلم لأطفالك الأعزاء
+            </p>
+            <div id="threejs-hero" class="w-full h-64 bg-gradient-to-br from-blue-100 to-green-100 rounded-3xl mb-8 flex items-center justify-center">
+                <div class="text-4xl animate-bounce">🎪 مساحة الأنيميشن ثلاثي الأبعاد 🎪</div>
+            </div>
+        </header>
+        
+        <!-- Categories Section -->
+        <section class="mb-16">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12 font-['Comic_Neue']" data-aos="fade-up">
+                🌟 فئات الألعاب المثيرة 🌟
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Building Blocks -->
+                <div class="card-playful p-6 text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-3d text-6xl mb-4">🧱</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2 font-['Fredoka_One']">مكعبات البناء</h3>
+                    <p class="text-gray-600 font-['Nunito']">اطلق خيال طفلك مع مكعبات البناء الملونة</p>
+                    <button class="btn-playful mt-4">استكشف الآن!</button>
+                </div>
+                
+                <!-- Puzzles -->
+                <div class="card-playful p-6 text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="icon-3d text-6xl mb-4">🧩</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2 font-['Fredoka_One']">ألعاب البازل</h3>
+                    <p class="text-gray-600 font-['Nunito']">تطوير المهارات المعرفية والتفكير المنطقي</p>
+                    <button class="btn-playful mt-4">ابدأ التحدي!</button>
+                </div>
+                
+                <!-- Learning ABC -->
+                <div class="card-playful p-6 text-center" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="icon-3d text-6xl mb-4">🔤</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2 font-['Fredoka_One']">تعلم الحروف</h3>
+                    <p class="text-gray-600 font-['Nunito']">رحلة تعليمية ممتعة لتعلم الحروف والأرقام</p>
+                    <button class="btn-playful mt-4">تعلم الآن!</button>
+                </div>
+                
+                <!-- Art Supplies -->
+                <div class="card-playful p-6 text-center" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="icon-3d text-6xl mb-4">🎨</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2 font-['Fredoka_One']">أدوات الرسم</h3>
+                    <p class="text-gray-600 font-['Nunito']">أطلق الإبداع الفني لدى طفلك</p>
+                    <button class="btn-playful mt-4">ابدع معنا!</button>
+                </div>
+                
+                <!-- Science Lab -->
+                <div class="card-playful p-6 text-center" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="icon-3d text-6xl mb-4">🔬</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2 font-['Fredoka_One']">مختبر العلوم</h3>
+                    <p class="text-gray-600 font-['Nunito']">تجارب علمية آمنة وممتعة للصغار</p>
+                    <button class="btn-playful mt-4">اكتشف العلوم!</button>
+                </div>
+                
+                <!-- Music -->
+                <div class="card-playful p-6 text-center" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="icon-3d text-6xl mb-4">🎵</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2 font-['Fredoka_One']">الآلات الموسيقية</h3>
+                    <p class="text-gray-600 font-['Nunito']">تنمية الحس الموسيقي والسمع</p>
+                    <button class="btn-playful mt-4">اعزف معنا!</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-8 font-['Comic_Neue']">
+                ✨ لماذا نختلف؟ ✨
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6" data-aos="flip-left" data-aos-delay="100">
+                    <div class="text-5xl mb-4">🛡️</div>
+                    <h3 class="text-xl font-bold mb-2 font-['Fredoka_One']">آمان 100%</h3>
+                    <p class="text-gray-600 font-['Nunito']">جميع منتجاتنا آمنة ومصرح بها طبياً</p>
+                </div>
+                
+                <div class="p-6" data-aos="flip-left" data-aos-delay="200">
+                    <div class="text-5xl mb-4">🎓</div>
+                    <h3 class="text-xl font-bold mb-2 font-['Fredoka_One']">تعليمي مدروس</h3>
+                    <p class="text-gray-600 font-['Nunito']">منتجات مصممة بخبرة تربوية</p>
+                </div>
+                
+                <div class="p-6" data-aos="flip-left" data-aos-delay="300">
+                    <div class="text-5xl mb-4">🚚</div>
+                    <h3 class="text-xl font-bold mb-2 font-['Fredoka_One']">توصيل سريع</h3>
+                    <p class="text-gray-600 font-['Nunito']">نصل إليك في أسرع وقت ممكن</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="text-center" data-aos="zoom-in">
+            <div class="card-playful p-12 bg-gradient-to-br from-green-50 to-blue-50">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4 font-['Fredoka_One']">
+                    🎉 ابدأ رحلة التعلم الآن! 🎉
+                </h2>
+                <p class="text-xl text-gray-600 mb-8 font-['Nunito']">
+                    استثمر في مستقبل طفلك مع أفضل الألعاب التعليمية
+                </p>
+                <button class="btn-playful text-2xl px-8 py-4">
+                    🛒 تسوق الآن
+                </button>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="./app.js"></script>
+    <script src="./kids-theme.js"></script>
+    
+    <script>
+        // تشغيل أنيميشن AOS بسيط
+        function initAOS() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('aos-animate');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('[data-aos]').forEach(el => {
+                observer.observe(el);
+            });
+        }
+        
+        // تشغيل تأثيرات إضافية
+        function addPlayfulEffects() {
+            // تأثير النقر على الأزرار
+            document.querySelectorAll('.btn-playful').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    // إنشاء جسيمات ملونة
+                    for(let i = 0; i < 20; i++) {
+                        createParticle(e.pageX, e.pageY);
+                    }
+                });
+            });
+            
+            // تأثير hover على البطاقات
+            document.querySelectorAll('.card-playful').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.filter = 'brightness(1.1)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.filter = 'brightness(1)';
+                });
+            });
+        }
+        
+        // إنشاء جسيمات ملونة
+        function createParticle(x, y) {
+            const colors = ['#FF6B8A', '#FFB84D', '#22C55E', '#4F9AFF', '#A855F7'];
+            const particle = document.createElement('div');
+            
+            particle.style.cssText = `
+                position: fixed;
+                top: ${y}px;
+                left: ${x}px;
+                width: 10px;
+                height: 10px;
+                background: ${colors[Math.floor(Math.random() * colors.length)]};
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 1000;
+                animation: particle-explode 1s ease-out forwards;
+            `;
+            
+            document.body.appendChild(particle);
+            
+            // إزالة الجسيم بعد الانيميشن
+            setTimeout(() => {
+                particle.remove();
+            }, 1000);
+        }
+        
+        // إضافة CSS للجسيمات
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes particle-explode {
+                0% {
+                    transform: scale(1) translate(0, 0);
+                    opacity: 1;
+                }
+                100% {
+                    transform: scale(0) translate(${Math.random() * 200 - 100}px, ${Math.random() * 200 - 100}px);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // تشغيل كل شيء عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            initAOS();
+            addPlayfulEffects();
+            
+            // رسالة ترحيب طفولية
+            setTimeout(() => {
+                console.log('🎉 مرحباً بك في عالم الألعاب التعليمية! 🎉');
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

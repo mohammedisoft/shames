@@ -1,0 +1,36 @@
+<!-- أيقونة لعبة البناء والتركيب -->
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="buildingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22C55E;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4ADE80;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16A34A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- الكتلة العلوية -->
+  <rect x="15" y="8" width="30" height="15" rx="3" fill="url(#buildingGradient)" stroke="#166534" stroke-width="2"/>
+  <circle cx="22.5" cy="15.5" r="2" fill="#166534"/>
+  <circle cx="30" cy="15.5" r="2" fill="#166534"/>
+  <circle cx="37.5" cy="15.5" r="2" fill="#166534"/>
+  
+  <!-- الكتلة الوسطى -->
+  <rect x="10" y="25" width="40" height="15" rx="3" fill="#FFB84D" stroke="#E69500" stroke-width="2"/>
+  <circle cx="17.5" cy="32.5" r="2" fill="#E69500"/>
+  <circle cx="25" cy="32.5" r="2" fill="#E69500"/>
+  <circle cx="32.5" cy="32.5" r="2" fill="#E69500"/>
+  <circle cx="40" cy="32.5" r="2" fill="#E69500"/>
+  
+  <!-- الكتلة السفلى -->
+  <rect x="5" y="42" width="50" height="15" rx="3" fill="#4F9AFF" stroke="#2B6CB0" stroke-width="2"/>
+  <circle cx="12.5" cy="49.5" r="2" fill="#2B6CB0"/>
+  <circle cx="20" cy="49.5" r="2" fill="#2B6CB0"/>
+  <circle cx="27.5" cy="49.5" r="2" fill="#2B6CB0"/>
+  <circle cx="35" cy="49.5" r="2" fill="#2B6CB0"/>
+  <circle cx="42.5" cy="49.5" r="2" fill="#2B6CB0"/>
+  
+  <!-- تأثير إشراق -->
+  <ellipse cx="20" cy="12" rx="4" ry="2" fill="rgba(255,255,255,0.3)"/>
+  <ellipse cx="35" cy="29" rx="6" ry="3" fill="rgba(255,255,255,0.2)"/>
+  <ellipse cx="25" cy="46" rx="8" ry="4" fill="rgba(255,255,255,0.2)"/>
+</svg>

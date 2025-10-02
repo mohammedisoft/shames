@@ -1,0 +1,71 @@
+<!-- أيقونة الموسيقى والأصوات -->
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pianoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F9AFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2B6CB0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- بيانو صغير -->
+  <rect x="10" y="35" width="25" height="15" rx="2" fill="url(#pianoGradient)" stroke="#2B6CB0" stroke-width="1"/>
+  
+  <!-- المفاتيح البيضاء -->
+  <rect x="11" y="36" width="3" height="13" fill="white" stroke="#ddd" stroke-width="0.5"/>
+  <rect x="15" y="36" width="3" height="13" fill="white" stroke="#ddd" stroke-width="0.5"/>
+  <rect x="19" y="36" width="3" height="13" fill="white" stroke="#ddd" stroke-width="0.5"/>
+  <rect x="23" y="36" width="3" height="13" fill="white" stroke="#ddd" stroke-width="0.5"/>
+  <rect x="27" y="36" width="3" height="13" fill="white" stroke="#ddd" stroke-width="0.5"/>
+  <rect x="31" y="36" width="3" height="13" fill="white" stroke="#ddd" stroke-width="0.5"/>
+  
+  <!-- المفاتيح السوداء -->
+  <rect x="13" y="36" width="2" height="8" fill="#333"/>
+  <rect x="17" y="36" width="2" height="8" fill="#333"/>
+  <rect x="25" y="36" width="2" height="8" fill="#333"/>
+  <rect x="29" y="36" width="2" height="8" fill="#333"/>
+  <rect x="32" y="36" width="2" height="8" fill="#333"/>
+  
+  <!-- نوتات موسيقية ملونة -->
+  <g fill="#FF8FA3">
+    <circle cx="40" cy="15" r="3"/>
+    <rect x="42.5" y="8" width="1" height="14"/>
+    <path d="M43.5 8 Q46 6 48 8 Q46 10 43.5 8"/>
+  </g>
+  
+  <g fill="#22C55E">
+    <circle cx="48" cy="25" r="3"/>
+    <rect x="50.5" y="18" width="1" height="14"/>
+    <path d="M51.5 18 Q54 16 56 18 Q54 20 51.5 18"/>
+  </g>
+  
+  <g fill="#FFE066">
+    <circle cx="42" cy="35" r="3"/>
+    <rect x="44.5" y="28" width="1" height="14"/>
+    <path d="M45.5 28 Q48 26 50 28 Q48 30 45.5 28"/>
+  </g>
+  
+  <!-- خطوط الموسيقى -->
+  <g stroke="#ddd" stroke-width="0.5" opacity="0.7">
+    <line x1="38" y1="10" x2="55" y2="10"/>
+    <line x1="38" y1="15" x2="55" y2="15"/>
+    <line x1="38" y1="20" x2="55" y2="20"/>
+    <line x1="38" y1="25" x2="55" y2="25"/>
+    <line x1="38" y1="30" x2="55" y2="30"/>
+  </g>
+  
+  <!-- موجات صوتية -->
+  <g stroke="#A855F7" stroke-width="2" fill="none" opacity="0.6">
+    <path d="M8 20 Q12 15 16 20 Q20 25 24 20"/>
+    <path d="M5 25 Q10 20 15 25 Q20 30 25 25 Q30 20 35 25"/>
+  </g>
+  
+  <!-- نجوم موسيقية -->
+  <g fill="#FFE066">
+    <path d="M8 8 L9 11 L12 11 L10 13 L11 16 L8 14 L5 16 L6 13 L4 11 L7 11 Z"/>
+  </g>
+  
+  <!-- سماعات صغيرة -->
+  <circle cx="15" cy="15" r="4" fill="#FF8FA3" opacity="0.8"/>
+  <circle cx="15" cy="15" r="2" fill="#E15065"/>
+  <rect x="19" y="13" width="6" height="4" rx="2" fill="#333"/>
+</svg>
